@@ -1,0 +1,92 @@
+@import '../settings/s-colors';
+@import '../settings/s-breakpoints';
+
+.search-bar {
+    padding: 0 20px;
+    display: flex;
+    margin-left: auto;
+
+    button {
+        color: $dark-600;
+        cursor: pointer;
+    }
+
+    button:hover {
+        color: $primary-600;
+    }
+}
+
+.search-bar__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    color: white;
+    height: 60px;
+    background-color: $primary-600;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    &::before {
+        width: 200px;
+        content: '';
+        background-color: $primary-600;
+        margin-left: -199px;
+    }
+
+    &::after {
+        width: 1px;
+        content: '';
+        background-color: $primary-600;
+    }
+
+    @include for-1140 {
+        max-width: calc(100%);
+    }
+
+    button {
+        background-color: inherit;
+        color: inherit;
+        cursor: pointer;
+    }
+
+    .logo {
+        margin-right: 40px;
+        align-self: center;
+    }
+
+    label {
+        border-left: 1px solid white;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        flex-grow: 1;
+    }
+
+    input {
+        background-color: inherit;
+        color: white;
+        flex-grow: 1;
+        margin-left: 20px;
+    }
+
+    i:hover {
+        color: white;
+    }
+
+    i {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        height: 60px;
+        justify-self: flex-end;
+    }
+
+    i:nth-last-child(1) {
+        border-left: none;
+    }
+}

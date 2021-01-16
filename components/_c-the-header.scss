@@ -1,0 +1,73 @@
+@import '../settings/s-colors';
+
+.the-header {
+    background-color: $secondary-200;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    padding: 0 20px;
+    color: $dark-600;
+    
+    &__menu {
+        max-width: 1110px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 30px;
+        align-items: center;
+        position: relative;
+
+        &-left {
+            display: inherit;
+            max-width: 70%;
+            width: 100%;
+            flex: 1;
+            position: relative;
+            height: 60px;
+
+            .logo {
+                margin-right: 40px;
+                align-self: center;
+            }
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            max-width: 50%;
+            width: min-content;
+            justify-content: flex-end;
+
+            a {
+                color: $dark-600;
+            }
+
+            a:hover {
+                color: $primary-600;
+                cursor: pointer;
+            }
+
+            i:hover {
+                color: $primary-600;
+                cursor: pointer;
+            }
+
+            &--favorites {
+                padding: 0 20px;
+                border-left: $grey-400 1px solid;
+                border-right: $grey-400 1px solid;
+                height: 60px;
+                display: flex;
+                align-items: center;
+            }
+
+            &--sign {
+                margin-left: 40px;
+            }
+
+            &--log {
+                margin-left: 40px;
+            }
+        }
+    }
+}

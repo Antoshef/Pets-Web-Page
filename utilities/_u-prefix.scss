@@ -1,0 +1,43 @@
+@import '../settings/s-colors';
+
+.u-hidden {
+    display: none;
+}
+
+.u-search--show {
+    z-index: 1;
+}
+
+.u-btn--hover:hover {
+    background-color: $primary-800;
+    transition: 1s;
+}
+
+.u-dropdown--hidden {
+    top: 0px;
+}
+
+.h1-like {
+    font-size: 30px;
+}
+
+.h2-like {
+    font-size: 26px;
+}
+
+.h3-like {
+    font-size: 22px;
+}
+
+.h4-like {
+    font-size: 18px;
+}
+
+.h5-like {
+    font-size: 16px;
+}
+
+.h6-like {
+    font-size: 14px;
+}
+

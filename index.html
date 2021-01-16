@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Side</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="the-header">
+        <section class="the-header__menu">
+            <div class="header-navigation__dropdown u-dropdown--hidden">
+                <ul>
+                    <li>
+                        <a href="#">Кученца</a>
+                    </li>
+                    <li>
+                        <a href="#">Котенца</a>
+                    </li>
+                    <li>
+                        <a href="#">Хамстери</a>
+                    </li>
+                    <li>
+                        <a href="#">Папагали</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-navigation__dropdown u-dropdown--hidden">
+                <ul>
+                    <li>
+                        <a href="#">Храна</a>
+                    </li>
+                    <li>
+                        <a href="#">Среда</a>
+                    </li>
+                    <li>
+                        <a href="#">Инфо</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="the-header__menu-left">
+                <div class="logo">
+                    <a href="#"><img src="./images/logo.png" alt="logo"></a>
+                </div>
+                <nav class="header-navigation">
+                    <div class="header-navigation__pets">
+                        <button onclick="petsBar()">
+                            Животинки <i class="fa fa-caret-down"></i>
+                        </button>
+                        
+                    </div>
+                    <div class="header-navigation__resourses">
+                        <button onclick="resoursesBar()">
+                            Ресурси <i class="fa fa-caret-down"></i>
+                        </button>
+                        
+                    </div>
+                </nav>
+                <div class="search-bar">
+                    <button onclick="search()">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                <div class="search-bar__menu">
+                    <div class="logo">
+                        <a href="#"><img src="./images/logo-invert.png" alt="logo"></a>
+                    </div>
+                    <label for="search" class="h3-like">
+                        Търси :
+                        <input id="selected" type="text">
+                    </label>
+                    <button class="u-btn--hover">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <button onclick="closeSearch()">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="the-header__menu-right">
+                
+                <div class="the-header__menu-right--favorites">
+                    <i class="fa fa-heart"></i>
+                </div>
+                <div class="the-header__menu-right--sign">
+                    <a href="#">Вход</a>
+                </div>
+                <div class="the-header__menu-right--log">
+                    <a href="#">Регистрация</a>
+                </div>
+            </div>
+        </section>
+    </header>
+    <script src="./script.js"></script>
+</body>
+</html>

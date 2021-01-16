@@ -1,0 +1,55 @@
+@import '../settings/s-colors';
+
+.header-navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    div {
+        margin-right: 40px;
+    }
+
+    a {
+        color: $dark-600;
+    }
+
+    div:nth-last-child(1) {
+        margin-right: 0;
+    }
+
+    button {
+        color: $dark-600;
+    }
+
+    button:hover {
+        color: $primary-600;
+        cursor: pointer;
+    }
+}
+
+.header-navigation__dropdown {
+    position: absolute;
+    padding: 0 20px;
+    top: 61px;
+    opacity: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $primary-600;
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: top 0.5s;
+    border-radius: 0 0 5px 5px ;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+
+        li > a {
+            color: white;
+        }
+    }
+}
