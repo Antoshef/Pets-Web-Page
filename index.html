@@ -6,7 +6,7 @@
     <title>Pet Side</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body> 
     <!-- Header -->
     <header class="o-the-header">
         <!-- Whole Header -->
@@ -39,16 +39,14 @@
                     <li>
                         <a href="#">Инфо <i class="fa fa-chevron-right"></i></a>
                     </li>
-                    <li class="u-tablet-none">
-                        <div class="search-bar__menu search-dropdown">
-                            <label for="search" class="h3-like">
-                                Търси :
-                                <input type="text">
-                            </label>
-                            <button type="button">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
+                    <li class="u-tablet-none search-bar__menu search-dropdown">
+                        <label for="search" class="h3-like">
+                            Търси:
+                            <input type="text">
+                        </label>
+                        <button type="button">
+                            <i class="fa fa-search"></i>
+                        </button>    
                     </li>
                 </ul>
             </div>
@@ -152,6 +150,49 @@
                 </button>
             </nav>
         </header>
+
+        <section class="c-cards">
+            <div class="c-cards__title">
+                <h2 class="h1-like">
+                    Домнашни Любимци Търсещи Стопанин
+                </h2>
+            </div>
+            <div class="c-cards-wrapper">
+                <div class="e-card">
+                    <div class="e-card__image">
+                        <i class="fa fa-heart e-favorite"></i>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/An_up-close_picture_of_a_curious_male_domestic_shorthair_tabby_cat.jpg" alt="single pet">
+                    </div>
+                    <div class="e-card__title">
+                        <p class="h3-like">
+                            Якоб
+                        </p>
+                    </div>
+                </div>
+                <div class="e-card">
+                    <div class="e-card__image">
+                        <i class="fa fa-heart e-favorite"></i>
+                        <img src="https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg" alt="single pet">
+                    </div>
+                    <div class="e-card__title">
+                        <p class="h3-like">
+                            Гарфийлд
+                        </p>
+                    </div>
+                </div>
+                <div class="e-card">
+                    <div class="e-card__image">
+                        <i class="fa fa-heart e-favorite"></i>
+                        <img src="https://cdn.mos.cms.futurecdn.net/yzV5i2F35i9RozwSeFLPJV.jpg" alt="single pet">
+                    </div>
+                    <div class="e-card__title">
+                        <p class="h3-like">
+                            Фердинанд
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- JavaScript sourse -->

@@ -12,3 +12,14 @@
     display: flex;
     align-items: center;
 }
+
+.e-favorite {
+    height: 2em;
+    width: 2em;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #ffffff, $alpha: 0.5);
+    border-radius: 50%;
+}

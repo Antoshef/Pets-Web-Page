@@ -7,18 +7,76 @@
     flex-direction: column;
     text-align: center;
     margin-top: -78px;
+    overflow: hidden;
+
+    @include for-tablet-only {
+        flex-direction: row;
+        margin-top: -55px;
+    }
+
+    @include for-tablet-landscape-up {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: -48px;
+    }
 
     &__location {
         display: none;
+        background-color: $primary-900;
+        width: 31%;
+        border-radius: 20px 0 0 20px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
 
         @include for-tablet-landscape-up {
-            display: block;
+            display: flex;
+        }
+
+        input {
+            background-color: inherit;
+            color: white;
+
+            &::placeholder {
+                color: white;
+            }
+        }
+
+        &::after {
+            content: '';
+            width: 90px;
+            height: 90px;
+            background-color: $primary-900;
+            transform: rotate(77deg);
+            position: absolute;
+            right: -5px;
+            top: -27px;
+        }
+
+        &::before {
+            content: '';
+            width: 90px;
+            height: 90px;
+            background-color: $primary-900;
+            transform: rotate(17deg);
+            transform: rotate(16deg);
+            position: absolute;
+            right: -3px;
+            top: 37px;
         }
     }
 
     &__pets {
         display: flex;
         flex-direction: row;
+
+        @include for-tablet-only {
+            width: 67%;
+        }
+
+        @include for-tablet-landscape-up {
+            width: 46%;
+        }
 
         &-item {
             display: flex;
@@ -33,7 +91,7 @@
             border-radius: 0;
 
             &:hover {
-                background-color: $primary-900;
+                background-color: $primary-800;
             }
 
             &:nth-child(1) {
@@ -51,6 +109,24 @@
         background-color: $primary-900;
         color: $secondary-200;
         cursor: pointer;
+
+        &:hover {
+            background-color: $primary-800;
+        }
+
+        @include for-tablet-only {
+            width: 33%;
+        }
+
+        @include for-tablet-landscape-up {
+            width: 23%;
+        }
+
+        @include for-tablet-landscape-up {
+            background-color: $primary-600;
+            border-left: 1px solid $primary-900;
+            border-radius: 0 20px 20px 0;
+        }
     }
 
     a {
