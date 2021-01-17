@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Side</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>
+		.catSlides {
+					display:none;
+					}
+		.displayPic {width:100%}
+		h1,h2,p,div {
+					font-family: Nexa Regular,arial,helvetica,sans-serif;
+					}
+	</style>
+</head>
+<body class="w3-light-gray">
+    <header class="the-header">
+        <section class="the-header__menu">
+            <div class="header-navigation__dropdown u-dropdown--hidden">
+                <ul>
+                    <li>
+                        <a href="#">Кученца</a>
+                    </li>
+                    <li>
+                        <a href="#">Котенца</a>
+                    </li>
+                    <li>
+                        <a href="#">Хамстери</a>
+                    </li>
+                    <li>
+                        <a href="#">Папагали</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-navigation__dropdown u-dropdown--hidden">
+                <ul>
+                    <li>
+                        <a href="#">Храна</a>
+                    </li>
+                    <li>
+                        <a href="#">Среда</a>
+                    </li>
+                    <li>
+                        <a href="#">Инфо</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="the-header__menu-left">
+                <div class="logo">
+                    <a href="#"><img src="./images/logo.png" alt="logo"></a>
+                </div>
+                <nav class="header-navigation">
+                    <div class="header-navigation__pets">
+                        <button onclick="petsBar()">
+                            Животинки <i class="fa fa-caret-down"></i>
+                        </button>
+                        
+                    </div>
+                    <div class="header-navigation__resourses">
+                        <button onclick="resoursesBar()">
+                            Ресурси <i class="fa fa-caret-down"></i>
+                        </button>
+                        
+                    </div>
+                </nav>
+                <div class="search-bar">
+                    <button onclick="search()">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                <div class="search-bar__menu">
+                    <div class="logo">
+                        <a href="#"><img src="./images/logo-invert.png" alt="logo"></a>
+                    </div>
+                    <label for="search" class="h3-like">
+                        Търси :
+                        <input id="selected" type="text">
+                    </label>
+                    <button class="u-btn--hover">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <button onclick="closeSearch()">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="the-header__menu-right">
+                
+                <div class="the-header__menu-right--favorites">
+                    <i class="fa fa-heart"></i>
+                </div>
+                <div class="the-header__menu-right--sign">
+                    <a href="#">Вход</a>
+                </div>
+                <div class="the-header__menu-right--log">
+                    <a href="#">Регистрация</a>
+                </div>
+            </div>
+        </section>
+    </header>
+	<section class="w3-display-container">
+		<div class="w3-center">
+			<img src="cats\cat-logo.jpg" class="w3-round">
+			<div class="w3-display-middle w3-card-4 w3-padding">
+				<div class="w3-padding-32">
+					<p><i><u>Home</i></u> > <i>Cats</i></p>
+					<h2 class="w3-center w3-xxlarge">Find the Right Cat Breed for You</h2>
+					<form class="w3-container">
+					  <input class="w3-input w3-border w3-animate-input" type="text" placeholder="Search name..." style="width:50%">
+					  <br>
+						<select class="w3-select" name="option">
+						  <option value="1">Option 1</option>
+						  <option value="2">Option 2</option>
+						  <option value="3">Option 3</option>
+						</select>
+					</form>
+					<br>
+					<button class="w3-button w3-khaki">SEARCH</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<br><br><br>
+	<section class="w3-row-padding w3-padding">
+		<div class="w3-quarter w3-center">
+			<form class="w3-container w3-padding">
+			  <h2>Filter Breeds</h2>
+			  <input class="w3-check" type="checkbox" checked="checked">
+			  <label>Low</label>
+			  <input class="w3-check" type="checkbox">
+			  <label> Moderate</label>
+			  <input class="w3-check" type="checkbox" disabled>
+			  <label>Hights</label>
+			</form>
+		</div>
+		<div class="w3-half w3-center">
+			<div class="w3-container">
+			  <h2>Form Elements in a Grid</h2>
+			  <p>Grooming, Friendlines, Vocalaty, Playfun</p>
+			</div>
+			<div class="w3-row-padding">
+			  <div class="w3-third">
+				<input class="w3-input w3-border" type="text" placeholder="One">
+			  </div>
+			  <div class="w3-third">
+				<input class="w3-input w3-border" type="text" placeholder="Two">
+			  </div>
+			  <div class="w3-third">
+				<input class="w3-input w3-border" type="text" placeholder="Three">
+			  </div>
+			</div>
+			<br>
+			<button class="w3-button w3-padding-large w3-border w3-khaki">SEND</button>
+		</div>
+		<div class="w3-quarter w3-center">
+			<h2>Breed:</h2>
+			 <p>Choose your correct race of your cat...</p>
+			<div>
+				<input class="w3-radio" type="radio" name="gender" value="male" checked>
+				<label>Male</label>
+				<input class="w3-radio" type="radio" name="gender" value="female">
+				<label>Female</label>
+			</div>
+			<br>
+			<div>
+				<input class="w3-radio" type="radio" name="gender" value="male" checked>
+				<label>Male</label>
+				<input class="w3-radio" type="radio" name="gender" value="female">
+				<label>Female</label>
+				<input class="w3-radio" type="radio" name="gender" value="female">
+				<label>Female</label>
+			</div>
+			<br>
+			<div>
+				<input class="w3-radio" type="radio" name="gender" value="male" checked>
+				<label>Male</label>
+				<input class="w3-radio" type="radio" name="gender" value="female">
+				<label>Female</label>
+			</div>
+		</div>
+	</section>
+	<br><br><br><br>
+	<!-- Popular cats in 2020 -->
+	<section class="w3-row-padding w3-content w3-white w3-margin-bottom">
+	<br>
+		<h2 class="w3-center"><b>Most popular cats breed in 2020</b></h2>
+		<article class="FirstCat w3-quarter">
+			<div class="w3-padding-16 w3-display-container">
+				<img src="cats\Cat1.png" class="w3-image">
+				<div class="w3-button w3-display-bottommiddle w3-container w3-khaki w3-center">
+				Phil
+			  </div>
+			</div>
+		</article>
+		<article class="SecondCat w3-quarter">
+			<div class="w3-padding-16 w3-display-container">
+				<img src="cats\Cat2.png" class="w3-image">
+				<div class="w3-button w3-display-bottommiddle w3-container w3-khaki w3-center">
+				Carol
+			  </div>
+			</div>
+		</article>
+		<article class="ThirdCat w3-quarter">
+			<div class="w3-padding-16 w3-display-container">
+				<img src="cats\Cat3.png" class="w3-image">
+				<div class="w3-button w3-display-bottommiddle w3-container w3-khaki w3-center">
+				Smith
+			  </div>
+			</div>
+		</article>
+		<article class="FourthCat w3-quarter">
+			<div class="w3-padding-16 w3-display-container">
+				<img src="cats\Cat4.png" class="w3-image">
+				<div class="w3-button w3-display-bottommiddle w3-container w3-khaki w3-center">
+				T
+			  </div>
+			</div>
+		</article>
+	</section>
+	<br><br>
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("catSlides");
+		  if (n > x.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+			 x[i].style.display = "none";  
+		  }
+		  x[slideIndex-1].style.display = "block";  
+		}
+	</script>
+    <script src="./script.js"></script>
+</body>
+</html>
