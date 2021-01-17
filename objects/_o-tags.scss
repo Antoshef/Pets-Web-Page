@@ -1,0 +1,16 @@
+
+.o-the-header {
+    background-color: $secondary-200;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    padding: 0 20px;
+    color: $primary-600;
+
+
+    @include for-tablet-landscape-up {
+        color: $dark-600;
+    }
+}
+
+// .o-main {
+
+// }

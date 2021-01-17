@@ -1,0 +1,21 @@
+@import '../settings/s-fonts';
+@import '../settings/s-breakpoints';
+@import '../settings/s-colors';
+
+.btn-main {
+    color: $secondary-200;
+    background-color: $primary-600;
+    border-radius: 30px;
+    padding: 15px 20px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primary-900;
+    }
+
+    a {
+        color: inherit;
+    }
+}
+

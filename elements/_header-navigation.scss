@@ -1,9 +1,15 @@
 @import '../settings/s-colors';
+@import '../settings/s-breakpoints';
 
+// Dropdown Menu Preferances
 .header-navigation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: none;
+
+    @include for-tablet-landscape-up {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
     div {
         margin-right: 40px;
@@ -28,28 +34,72 @@
 }
 
 .header-navigation__dropdown {
-    position: absolute;
-    padding: 0 20px;
-    top: 61px;
-    opacity: 100%;
-    left: 0;
-    width: 100%;
+    position: relative;
+    font-size: 38px;
+    left: -20px;
+    width: calc(100% + 40px);
     background-color: $primary-600;
-    min-height: 60px;
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
     transition: top 0.5s;
-    border-radius: 0 0 5px 5px ;
+    grid-area: header-mid;
+
+    @include for-small-phone {
+        font-size: 26px;
+    }
+
+    @include for-tablet-landscape-up {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        min-height: 60px;
+        top: 61px;
+        left: 0;
+        font-size: 30px;
+        width: 100%;
+        border-radius: 0 0 5px 5px;
+
+        i {
+            display: none;
+        }
+    }
 
     ul {
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: space-around;
         width: 100%;
 
+        @media (max-width: 899px) {
+            align-items: center;
+        }
+
+        @include for-tablet-landscape-up {
+            flex-direction: row;
+        }
+
+        li {
+            transition: transform 0.7s;
+            padding: 7px 10px;
+
+            @media (max-width: 899px) {
+                padding: 2% 0 2% 15px;
+            }
+        }
+
+        li:hover {
+            transform: scale(1.1);
+        }
+
         li > a {
             color: white;
+        }
+
+        i {
+            font-size: 0.5em;
+            padding-left: 1em;
         }
     }
 }

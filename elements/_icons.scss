@@ -1,6 +1,14 @@
 @import '../settings/s-colors';
 
+// Bootstrap and other Icons
 .fa-caret-down {
     font-size: 22px;
     padding-left: 5px;
+}
+
+.e-icon {
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
 }

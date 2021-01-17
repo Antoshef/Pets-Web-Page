@@ -1,73 +1,106 @@
 @import '../settings/s-colors';
+@import '../settings/s-breakpoints';
 
-.the-header {
+// Main Header Tag
+.the-header__menu {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color: $secondary-200;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-    padding: 0 20px;
-    color: $dark-600;
-    
-    &__menu {
-        max-width: 1110px;
+    color: $primary-600;
+    font-size: 30px;
+    align-items: center;
+    position: relative;
+
+    @include for-tablet-landscape-up {
+        color: $dark-600;
+    }
+
+    // Logo, Pets, Resourses 
+    &-left {
+        display: inherit;
+        max-width: 70%;
         width: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        font-size: 30px;
-        align-items: center;
+        flex: 1;
+        height: 60px;
         position: relative;
+        grid-area: header-left;
 
-        &-left {
-            display: inherit;
-            max-width: 70%;
+        .logo {
+            margin-right: 40px;
+            align-self: center;
+        }
+    }
+
+    // Search bar, Favorites icon, Sign in
+    &-right {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        width: min-content;
+        justify-content: flex-end;
+        grid-area: header-right;
+
+        @include for-tablet-landscape-up {
+            max-width: 50%;
+        }
+
+        @include for-phone-only {
+            align-items: flex-end;
             width: 100%;
-            flex: 1;
-            position: relative;
-            height: 60px;
+        }
 
-            .logo {
-                margin-right: 40px;
-                align-self: center;
+        a {
+            color: $primary-600;
+
+            @include for-tablet-landscape-up {
+                color: $dark-600;
             }
         }
 
-        &-right {
-            display: flex;
-            align-items: center;
-            max-width: 50%;
-            width: min-content;
-            justify-content: flex-end;
+        a:hover {
+            color: $primary-600;
+            cursor: pointer;
+        }
 
-            a {
-                color: $dark-600;
-            }
+        i:hover {
+            color: $primary-600;
+            cursor: pointer;
+        }
 
-            a:hover {
-                color: $primary-600;
-                cursor: pointer;
-            }
-
-            i:hover {
-                color: $primary-600;
-                cursor: pointer;
-            }
+        .e-icon {
 
             &--favorites {
-                padding: 0 20px;
-                border-left: $grey-400 1px solid;
-                border-right: $grey-400 1px solid;
-                height: 60px;
-                display: flex;
-                align-items: center;
+                border: none;
+
+                @include for-tablet-landscape-up {
+                    border-left: $grey-400 1px solid;
+                    border-right: $grey-400 1px solid;
+                }
             }
 
-            &--sign {
-                margin-left: 40px;
-            }
+            &--burger {
+                border: 0;
+                
+                color: $primary-600;
 
-            &--log {
-                margin-left: 40px;
+                @include for-tablet-landscape-up {
+                    display: none;
+                    border-right: 1px solid $primary-600;
+                }
+            }
+        }
+
+        &--sign {
+            margin-left: 40px;
+
+            @include for-phone-only {
+                display: none;
             }
         }
     }
-}
+}  
+    

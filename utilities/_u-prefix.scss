@@ -1,16 +1,19 @@
 @import '../settings/s-colors';
 
+// Prefix classes
 .u-hidden {
     display: none;
 }
 
-.u-search--show {
-    z-index: 1;
-}
+
 
 .u-btn--hover:hover {
     background-color: $primary-800;
     transition: 1s;
+}
+
+.u-flex {
+    display: flex;
 }
 
 .u-dropdown--hidden {

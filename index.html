@@ -7,57 +7,70 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="the-header">
-        <section class="the-header__menu">
-            <div class="header-navigation__dropdown u-dropdown--hidden">
+    <!-- Header -->
+    <header class="o-the-header">
+        <!-- Whole Header -->
+        <section class="the-header__menu u-header-grid">
+            <!-- Dropdown Navigation for search bar -->
+            <div class="header-navigation__dropdown u-nav-top u-dropdown--hidden">
                 <ul>
                     <li>
-                        <a href="#">Кученца</a>
+                        <a href="#">Кученца <i class="fa fa-chevron-right"></i></a>
                     </li>
                     <li>
-                        <a href="#">Котенца</a>
+                        <a href="#">Котенца <i class="fa fa-chevron-right"></i></a>
                     </li>
                     <li>
-                        <a href="#">Хамстери</a>
+                        <a href="#">Хамстери <i class="fa fa-chevron-right"></i></a>
                     </li>
                     <li>
-                        <a href="#">Папагали</a>
+                        <a href="#">Папагали <i class="fa fa-chevron-right"></i></a>
                     </li>
                 </ul>
             </div>
-            <div class="header-navigation__dropdown u-dropdown--hidden">
+            <div class="header-navigation__dropdown u-nav-bot u-dropdown--hidden">
                 <ul>
                     <li>
-                        <a href="#">Храна</a>
+                        <a href="#">Храна <i class="fa fa-chevron-right"></i></a>
                     </li>
                     <li>
-                        <a href="#">Среда</a>
+                        <a href="#">Среда <i class="fa fa-chevron-right"></i></a>
                     </li>
                     <li>
-                        <a href="#">Инфо</a>
+                        <a href="#">Инфо <i class="fa fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+                        <div class="search-bar__menu search-dropdown">
+                            <label for="search" class="h3-like">
+                                Търси :
+                                <input type="text">
+                            </label>
+                            <button type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
                     </li>
                 </ul>
             </div>
+            <!-- Left menu side icons -->
             <div class="the-header__menu-left">
                 <div class="logo">
                     <a href="#"><img src="./images/logo.png" alt="logo"></a>
                 </div>
                 <nav class="header-navigation">
                     <div class="header-navigation__pets">
-                        <button onclick="petsBar()">
+                        <button type="button" onclick="petsBar()">
                             Животинки <i class="fa fa-caret-down"></i>
                         </button>
-                        
                     </div>
                     <div class="header-navigation__resourses">
-                        <button onclick="resoursesBar()">
+                        <button type="button" onclick="resoursesBar()">
                             Ресурси <i class="fa fa-caret-down"></i>
                         </button>
-                        
                     </div>
                 </nav>
-                <div class="search-bar">
-                    <button onclick="search()">
+                <div class="e-search">
+                    <button type="button" onclick="search()">
                         <i class="fa fa-search"></i>
                     </button>
                 </div>
@@ -69,28 +82,77 @@
                         Търси :
                         <input id="selected" type="text">
                     </label>
-                    <button class="u-btn--hover">
+                    <button type="button" class="u-btn--hover">
                         <i class="fa fa-search"></i>
                     </button>
-                    <button onclick="closeSearch()">
+                    <button type="button" onclick="closeSearch()">
                         <i class="fa fa-times"></i>
                     </button>
                 </div>
             </div>
+            <!-- Right menu side icons -->
             <div class="the-header__menu-right">
-                
-                <div class="the-header__menu-right--favorites">
+                <div class="e-icon e-icon--favorites">
                     <i class="fa fa-heart"></i>
                 </div>
+                <button type="button" onclick="showBurger()" class="e-icon e-icon--burger">
+                    <i class="fa fa-bars"></i>
+                </button>
                 <div class="the-header__menu-right--sign">
                     <a href="#">Вход</a>
                 </div>
-                <div class="the-header__menu-right--log">
+                <div class="the-header__menu-right--sign">
                     <a href="#">Регистрация</a>
                 </div>
             </div>
+
         </section>
+
     </header>
     <script src="./script.js"></script>
+
+    <!-- Main -->
+    <main class="o-main">
+
+        <!-- Main Header -->
+        <header class="c-header">
+            <section class="c-header__title">
+                <h1>
+                    Открий своят най-добър приятел
+                </h1>
+                <h4>
+                    Потърси из всички сладки мъничета и ще откриеш щастие.
+                </h4>
+            <div class="c-header__button">
+                <button type="button" class="btn-main">
+                    <a href="#">Създай профил</a> 
+                </button>
+            </div>
+            </section>
+
+            <!-- Main Navigation -->
+            <nav class="c-header__nav e-main-nav">
+                <div class="e-main-nav__location">
+                    <label for="location">
+                        <input type="text" placeholder="Въведи град">
+                    </label>
+                </div>
+                <div class="e-main-nav__pets">
+                    <button type="button" class="e-main-nav__pets-item">
+                        <img src="./images/dog.png" alt="dog">
+                        <a href="#">Търси кучета</a>
+                    </button>
+                    <button type="button" class="e-main-nav__pets-item">
+                        <img src="./images/cat.png" alt="cat">
+                        <a href="#">Търси котета</a>
+                    </button>
+                </div>
+                <button type="button" class="e-main-nav__other">
+                    <a href="#">Търси други</a>
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+            </nav>
+        </header>
+    </main>
 </body>
 </html>

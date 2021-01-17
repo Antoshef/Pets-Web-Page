@@ -1,10 +1,15 @@
 @import '../settings/s-colors';
 @import '../settings/s-breakpoints';
 
-.search-bar {
-    padding: 0 20px;
-    display: flex;
-    margin-left: auto;
+// Search icon, Search bar, Dropdown Search bar
+.e-search {
+    display: none;
+
+    @include for-tablet-landscape-up {
+        padding: 0 20px;
+        display: flex;
+        margin-left: auto;
+    }
 
     button {
         color: $dark-600;
@@ -24,7 +29,7 @@
     height: 60px;
     background-color: $primary-600;
     position: absolute;
-    left: 0;
+    left: 1px;
     top: 0;
     width: 100%;
 
@@ -33,12 +38,6 @@
         content: '';
         background-color: $primary-600;
         margin-left: -199px;
-    }
-
-    &::after {
-        width: 1px;
-        content: '';
-        background-color: $primary-600;
     }
 
     @include for-1140 {
@@ -88,5 +87,35 @@
 
     i:nth-last-child(1) {
         border-left: none;
+    }
+}
+
+.search-dropdown {
+    position: relative;
+    border: 1px solid white;
+    border-radius: 10px;
+
+    button {
+        margin-right: 5px;
+    }
+
+    label {
+        border: 0;
+    }
+
+    i {
+        border: 0;
+    }
+
+    &::before {
+        content: none;
+    }
+
+    @include for-small-phone {
+        transform: scale(0.7);
+    }
+
+    @include for-tablet-landscape-up {
+        display: none;
     }
 }

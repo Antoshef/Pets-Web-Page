@@ -1,0 +1,60 @@
+@import '../settings/s-fonts';
+@import '../settings/s-breakpoints';
+@import '../settings/s-colors';
+
+.e-main-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: -78px;
+
+    &__location {
+        display: none;
+
+        @include for-tablet-landscape-up {
+            display: block;
+        }
+    }
+
+    &__pets {
+        display: flex;
+        flex-direction: row;
+
+        &-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            padding: 20px 10px;
+            background-color: $primary-600;
+            column-gap: 10px;
+            cursor: pointer;
+            border-radius: 0;
+
+            &:hover {
+                background-color: $primary-900;
+            }
+
+            &:nth-child(1) {
+                border-right: 1px solid $primary-900;
+            }
+
+            img {
+                width: 50px;
+            }
+        }
+    }
+
+    &__other {
+        padding: 30px 10px;
+        background-color: $primary-900;
+        color: $secondary-200;
+        cursor: pointer;
+    }
+
+    a {
+        color: $secondary-200;
+        margin-right: 10px;
+    }
+}

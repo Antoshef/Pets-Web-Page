@@ -1,0 +1,24 @@
+
+// Reusable utilities
+.u-header-grid {
+    @media (max-width: 899px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content 1fr min-content;
+        grid-template-areas: 
+        'header-left header-right'
+        'nav-top nav-top'
+        'nav-bot nav-bot';
+    }
+}
+
+.u-nav-top {
+    grid-area: nav-top;
+    @media (max-width: 899px) {
+        border-radius: 0;
+    }
+}
+
+.u-nav-bot {
+    grid-area: nav-bot;
+}

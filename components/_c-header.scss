@@ -1,0 +1,38 @@
+@import '../settings/s-fonts';
+@import '../settings/s-breakpoints';
+@import '../settings/s-colors';
+
+.c-header {
+    font-family: 'Nunito', sans-serif;
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background: url('https://love.doghero.com.br/wp-content/uploads/2018/01/Buldogue-franceCC82s-4.jpg') rgba(0, 0, 0, 1);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+        line-height: 1.7em;
+        text-align: center;
+        color: $secondary-400;
+        text-shadow: 2px 2px 2px $primary-900;
+        padding: 0 10px;
+
+        @include for-tablet-only {
+            align-items: flex-start;
+            padding: 0 30px;
+        }
+    }
+
+    &__button {
+        margin: 1.5em 0;
+    }
+
+    // &__nav {
+
+    // }
+}
