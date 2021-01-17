@@ -37,12 +37,11 @@
     position: relative;
     font-size: 38px;
     left: -20px;
-    width: calc(100% + 40px);
+    width: 100%;
     background-color: $primary-600;
     display: none;
     flex-direction: row;
     align-items: center;
-    transition: top 0.5s;
     grid-area: header-mid;
 
     @include for-small-phone {
@@ -54,11 +53,10 @@
         flex-wrap: wrap;
         position: absolute;
         min-height: 60px;
-        top: 61px;
+        top: 60px;
         left: 0;
         font-size: 30px;
         width: 100%;
-        border-radius: 0 0 5px 5px;
 
         i {
             display: none;
@@ -87,6 +85,10 @@
             @media (max-width: 899px) {
                 padding: 2% 0 2% 15px;
             }
+
+            // &:nth-last-child(1) {
+                
+            // }
         }
 
         li:hover {

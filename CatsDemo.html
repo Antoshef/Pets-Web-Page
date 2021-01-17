@@ -17,57 +17,70 @@
 	</style>
 </head>
 <body class="w3-light-gray">
-    <header class="the-header">
-        <section class="the-header__menu">
-            <div class="header-navigation__dropdown u-dropdown--hidden">
+    <!-- Header -->
+    <header class="o-the-header">
+        <!-- Whole Header -->
+        <section class="the-header__menu u-header-grid">
+            <!-- Dropdown Navigation for search bar -->
+            <div class="header-navigation__dropdown u-nav-top u-dropdown--hidden">
                 <ul>
                     <li>
-                        <a href="#">Кученца</a>
+                        <a href="#">Кученца <i class="fa fa-chevron-right"></i></a>
                     </li>
                     <li>
-                        <a href="#">Котенца</a>
+                        <a href="#">Котенца <i class="fa fa-chevron-right"></i></a>
                     </li>
                     <li>
-                        <a href="#">Хамстери</a>
+                        <a href="#">Хамстери <i class="fa fa-chevron-right"></i></a>
                     </li>
                     <li>
-                        <a href="#">Папагали</a>
+                        <a href="#">Папагали <i class="fa fa-chevron-right"></i></a>
                     </li>
                 </ul>
             </div>
-            <div class="header-navigation__dropdown u-dropdown--hidden">
+            <div class="header-navigation__dropdown u-nav-bot u-dropdown--hidden">
                 <ul>
                     <li>
-                        <a href="#">Храна</a>
+                        <a href="#">Храна <i class="fa fa-chevron-right"></i></a>
                     </li>
                     <li>
-                        <a href="#">Среда</a>
+                        <a href="#">Среда <i class="fa fa-chevron-right"></i></a>
                     </li>
                     <li>
-                        <a href="#">Инфо</a>
+                        <a href="#">Инфо <i class="fa fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+                        <div class="search-bar__menu search-dropdown">
+                            <label for="search" class="h3-like">
+                                Търси :
+                                <input type="text">
+                            </label>
+                            <button type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
                     </li>
                 </ul>
             </div>
+            <!-- Left menu side icons -->
             <div class="the-header__menu-left">
                 <div class="logo">
                     <a href="#"><img src="./images/logo.png" alt="logo"></a>
                 </div>
                 <nav class="header-navigation">
                     <div class="header-navigation__pets">
-                        <button onclick="petsBar()">
+                        <button type="button" onclick="petsBar()">
                             Животинки <i class="fa fa-caret-down"></i>
                         </button>
-                        
                     </div>
                     <div class="header-navigation__resourses">
-                        <button onclick="resoursesBar()">
+                        <button type="button" onclick="resoursesBar()">
                             Ресурси <i class="fa fa-caret-down"></i>
                         </button>
-                        
                     </div>
                 </nav>
-                <div class="search-bar">
-                    <button onclick="search()">
+                <div class="e-search">
+                    <button type="button" onclick="search()">
                         <i class="fa fa-search"></i>
                     </button>
                 </div>
@@ -79,27 +92,32 @@
                         Търси :
                         <input id="selected" type="text">
                     </label>
-                    <button class="u-btn--hover">
+                    <button type="button" class="u-btn--hover">
                         <i class="fa fa-search"></i>
                     </button>
-                    <button onclick="closeSearch()">
+                    <button type="button" onclick="closeSearch()">
                         <i class="fa fa-times"></i>
                     </button>
                 </div>
             </div>
+            <!-- Right menu side icons -->
             <div class="the-header__menu-right">
-                
-                <div class="the-header__menu-right--favorites">
+                <div class="e-icon e-icon--favorites">
                     <i class="fa fa-heart"></i>
                 </div>
+                <button type="button" onclick="showBurger()" class="e-icon e-icon--burger">
+                    <i class="fa fa-bars"></i>
+                </button>
                 <div class="the-header__menu-right--sign">
                     <a href="#">Вход</a>
                 </div>
-                <div class="the-header__menu-right--log">
+                <div class="the-header__menu-right--sign">
                     <a href="#">Регистрация</a>
                 </div>
             </div>
+
         </section>
+
     </header>
 	<section class="w3-display-container">
 		<div class="w3-center">
@@ -221,7 +239,7 @@
 		</article>
 	</section>
 	<br><br>
-	<script>
+	<script src="./script.js">
 		var slideIndex = 1;
 		showDivs(slideIndex);
 
@@ -240,6 +258,6 @@
 		  x[slideIndex-1].style.display = "block";  
 		}
 	</script>
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script> -->
 </body>
 </html>

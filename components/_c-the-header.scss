@@ -13,7 +13,7 @@
     color: $primary-600;
     font-size: 30px;
     align-items: center;
-    position: relative;
+    // position: relative;
 
     @include for-tablet-landscape-up {
         color: $dark-600;

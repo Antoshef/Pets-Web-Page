@@ -1,27 +1,3 @@
 @import '../settings/s-breakpoints';
 
-.o-the-header {
-    z-index: 10;
-}
 
-
-
-.header-navigation__dropdown {
-    z-index: 1;
-    
-    @include for-tablet-landscape-up {
-        z-index: -1;
-    }
-}
-
-.search-bar__menu {
-    z-index: -1;
-}
-
-.u-search--show {
-    z-index: 1;
-}
-
-// .c-header__title {
-//     z-index
-// }
