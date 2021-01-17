@@ -115,7 +115,12 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  font-family: ui-monospace,
+ SFMono-Regular,
+ Consolas,
+ 'Liberation Mono',
+ Menlo,
+ monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -963,7 +968,9 @@ a {
     -ms-grid-rows: min-content 1fr min-content;
         grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
         grid-template-rows: min-content 1fr min-content;
-        grid-template-areas: 'header-left header-right' 'nav-top nav-top' 'nav-bot nav-bot';
+        grid-template-areas: 'header-left header-right'
+ 'nav-top nav-top'
+ 'nav-bot nav-bot';
   }
 }
 
@@ -993,5 +1000,10 @@ a {
   .o-the-header {
     color: #4d4751;
   }
+}
+
+.info-pets{
+  color: red
+
 }
 /*# sourceMappingURL=style.css.map */

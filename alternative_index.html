@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<title>PetWeb Web Store</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-pale-red w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>PW</b> Web Store</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#pets" class="w3-bar-item w3-button">Types of pets</a>
+      <a href="#petstats" class="w3-bar-item w3-button">Pet statistics</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="https://zvipo.com/wp-content/uploads/2019/07/all-pets.jpg" alt="Pets" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>PW</b></span> <span class="w3-padding w3-black w3-opacity-min w3-hide-small w3-text-light-grey">Web Store</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-metro-purple w3-padding" style="max-width:1564px">
+
+  <!-- Showcase of offered pets -->
+  <div class="w3-container w3-padding-32" id="pets">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Types of pets we offer</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Dogs</div>
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" alt="House" style="width:100%" class="w3-hover-opacity" width = "500" height ="150"> 
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Cats</div>
+        <img src="https://c.files.bbci.co.uk/12A9B/production/_111434467_gettyimages-1143489763.jpg" alt="House" style="width:100%" class="w3-hover-opacity" width = "500" height ="150">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Hamsters</div>
+        <img src="https://images.unsplash.com/photo-1584553421349-3557471bed79?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1000&q=80" alt="House" style="width:100%" class="w3-hover-opacity" width = "500" height ="150">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Fish</div>
+        <img src="data:image/jpeg;base64,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" alt="House" style="width:100%" class="w3-hover-opacity" width = "500" height ="150"> 
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Parrots</div>
+        <img src="https://cf.ltkcdn.net/small-pets/images/orig/241065-1600x1030-pet-parrot-care.jpg" alt="Parrots" style="width:99%" class="w3-hover-opacity" width = "500" height ="150">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Hedgehogs</div>
+        <img src="https://mk0hedgehogworl7r4a4.kinstacdn.com/wp-content/uploads/2019/06/hedgehog-lifespan.png" alt="Hedgehogs" style="width:99%" class="w3-hover-opacity" width = "500" height ="150">
+      </div>
+    </div>
+  </div>
+
+  <!-- Information about the most famous pets -->
+  <div class="w3-container w3-padding-32" id="petstats">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Pet statistics around the world</h3>
+    <p>Choosing a family pet is an important life decision,
+         one that will affect not only the quality of your daily life, but the health and welfare of the pet you’re considering to bring into your home. There are so many factors to consider when deciding which type of pet is right for you: space, cost,
+         activity level, and time commitment, to name a few.By taking a look at some of the most popular pets in the U.S. and world at large, we might get a better idea of which types of animals people enjoy living with the most.
+    </p>
+  </div>
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team2.jpg" alt="Dog" style="width:100%">
+      <h3>Dogs</h3>
+      <p class="w3-opacity">Most popular pet</p>
+      <p>Our tried and true best friend, the dog!</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team1.jpg" alt="Cat" style="width:100%">
+      <h3>Cats</h3>
+      <p class="w3-opacity">Runner up</p>
+      <p>A playful companion, the cat!</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team3.jpg" alt="Fish" style="width:100%">
+      <h3>Fish</h3>
+      <p class="w3-opacity">Third most famous pet</p>
+      <p>They are small, but still very loveable!</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team4.jpg" alt="Birds" style="width:100%">
+      <h3>Birds</h3>
+      <p class="w3-opacity">Last but not least</p>
+      <p>The fourth most famous pet in the world is always ready to sing you a song!</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <p>Get in touch with us if you have any questions on pets!</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+  
+<!-- Image of location/map -->
+<div class="w3-container">
+  <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+</div>
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-pale-red w3-padding-16">
+  <p>PW Web Store 2021</p>
+</footer>
+
+</body>
+</html>
