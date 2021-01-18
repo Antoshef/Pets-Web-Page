@@ -2,13 +2,17 @@
 @import '../settings/s-breakpoints';
 @import '../settings/s-colors';
 
+.btn {
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
 .btn-main {
     color: $secondary-200;
     background-color: $primary-600;
-    border-radius: 30px;
-    padding: 15px 20px;
-    font-weight: bold;
-    cursor: pointer;
 
     &:hover {
         background-color: $primary-900;
@@ -16,6 +20,20 @@
 
     a {
         color: inherit;
+    }
+}
+
+.btn-transparent {
+    color: $primary-800;
+    background-color: white;
+    border: 2px solid $primary-400;
+    font-size: 14px;
+
+    @include for-tablet-landscape-up {
+        &:hover {
+            background-color: $primary-400;
+            color: $secondary-200;
+        }
     }
 }
 

@@ -4,11 +4,17 @@
 
 .c-cards {
     color: $primary-600;
-    margin-top: 20px;
+    margin: 20px 0;
 
     &__title {
         text-align: center;
         padding: 5%;
+
+        h2 {
+            @include for-phone-only {
+                font-size: 1.3em;
+            }
+        }
     }
 
     &-wrapper {

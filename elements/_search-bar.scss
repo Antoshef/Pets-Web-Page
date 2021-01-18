@@ -61,12 +61,14 @@
         display: flex;
         align-items: center;
         padding: 0 15px;
+        flex-grow: 1;
     }
 
     input {
         background-color: inherit;
         color: white;
         margin-left: 20px;
+        flex-grow: 1;
     }
 
     i:hover {

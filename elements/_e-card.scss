@@ -4,19 +4,29 @@
 
 .e-card {
     border-radius: 20px;
-    max-width: 40%;
+    min-width: 45%;
     overflow: hidden;
     background-color: white;
     position: relative;
+    box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.2);
+
+    @include for-tablet-only {
+        min-width: 30%;
+    }
+
+    @include for-tablet-landscape-up {
+        min-width: 23%;
+    }
 
     &__image {
-        height: 70%;
+        height: 75%;
 
         .e-favorite {
             position: absolute;
-            top: 6%;
+            top: 4%;
             right: 6%;
             color: $secondary-400;
+            cursor: pointer;
 
             &:hover {
                 color: $primary-600;
@@ -36,5 +46,66 @@
         text-align: center;
         padding: 15% 8% 8% 8%;
         position: relative;
+        height: 25%;
+        
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+
+.e-card__search {
+    background-color: $primary-600;
+    border-radius: 20px;
+    min-width: 45%;
+    color: $secondary-200;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+        .e-card__search-title {
+            background-color: $primary-800;
+        }
+    }
+
+    @include for-tablet-only {
+        min-width: 30%;
+    }
+
+    @include for-tablet-landscape-up {
+        min-width: 23%;
+    }
+
+    &-image {
+        height: 75%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 15%;
+
+        img {
+            max-width: 30%;
+        }
+    }
+
+    &-title {
+        font-weight: bold;
+        text-align: center;
+        padding: 15% 8% 8% 8%;
+        position: relative;
+        height: 25%;
+        border-top: 2px solid $secondary-200;
+        transition: background-color 0.5s;
+
+        button {
+            color: inherit;
+            background-color: inherit;
+            font-weight: bold;
+            cursor: pointer;
+        }
     }
 }

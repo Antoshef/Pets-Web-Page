@@ -1,0 +1,80 @@
+@import '../settings/s-fonts';
+@import '../settings/s-breakpoints';
+@import '../settings/s-colors';
+
+.c-adopt {
+    width: 110%;
+    background-color: white;
+    margin-left: -4%;
+    text-align: center;
+    padding: 8% 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    @media (max-width: 899px) {
+        padding-bottom: 0;
+    }
+
+    &__title {
+        color: $primary-900;
+    }
+
+    &__main {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        column-gap: 3%;
+        flex-wrap: nowrap;
+        
+        &-item {
+            min-width: 110%;
+            overflow: hidden;
+
+            @include for-tablet-landscape-up {
+                flex-basis: 30%;
+                min-width: 30%;
+            }
+            &-text {
+                color: $primary-900;
+                padding: 5% 0;
+
+                @include for-tablet-landscape-up {
+                    padding: 10% 0;
+                }
+
+                h3 {
+                    color: $primary-600;
+                    padding: 15px 0;
+                }
+            }
+
+            &-button {
+                width: 100%;
+                border-top: 2px solid $primary-400;
+                transition: background-color 0.5s;
+
+                @media (max-width: 899px) {
+                    cursor: pointer;
+                    
+                    &:hover {
+                        background-color: $primary-400;
+                        button {
+                            background-color: $primary-400;
+                            color: white;
+                        }
+                    }
+                }
+
+                @include for-tablet-landscape-up {
+                    border-top: none;
+                }
+
+                button {
+                    @media (max-width: 899px) {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

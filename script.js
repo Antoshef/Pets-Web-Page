@@ -30,14 +30,14 @@ function resoursesBar() {
 // Button Call Search Bar
 function search() {
     let current = document.getElementsByClassName('search-bar__menu')[1];
-    current.classList.add('u-flex');
+    current.classList.add('u-flex-none');
     document.getElementById('selected').focus();
 }
 
 // Button Close Search Bar
 function closeSearch() {
     let current = document.getElementsByClassName('search-bar__menu')[1];
-    current.classList.remove('u-flex');
+    current.classList.remove('u-flex-none');
 };
 
 // Button Call Burger Menu Dropdown

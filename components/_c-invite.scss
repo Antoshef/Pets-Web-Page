@@ -1,0 +1,19 @@
+@import '../settings/s-fonts';
+@import '../settings/s-breakpoints';
+@import '../settings/s-colors';
+
+.c-invite {
+    display: flex;
+    width: 110%;
+    margin-left: -5%;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+
+    @include for-tablet-landscape-up {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 4%;
+    }
+}

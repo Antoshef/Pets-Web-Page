@@ -1,4 +1,5 @@
 @import '../settings/s-colors';
+@import '../settings/s-breakpoints';
 
 // Prefix classes
 .u-hidden {
@@ -12,6 +13,14 @@
 
 .u-flex {
     display: flex;
+}
+
+.u-flex-none {
+    display: flex;
+
+    @media (max-width: 899px) {
+        display: none;
+    }
 }
 
 .u-tablet-none {
