@@ -1,0 +1,24 @@
+@import '../settings/s-fonts';
+@import '../settings/s-breakpoints';
+@import '../settings/s-colors';
+
+.c-cards {
+    color: $primary-600;
+    margin-top: 20px;
+
+    &__title {
+        text-align: center;
+        padding: 5%;
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        column-gap: 3%;
+
+        div {
+            flex-basis: 40%;
+        }
+    }
+}

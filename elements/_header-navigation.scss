@@ -37,12 +37,13 @@
     position: relative;
     font-size: 38px;
     left: -20px;
-    width: 100%;
+    width: calc(100% + 40px);
     background-color: $primary-600;
     display: none;
     flex-direction: row;
     align-items: center;
     grid-area: header-mid;
+    padding-bottom: 10px;
 
     @include for-small-phone {
         font-size: 26px;
@@ -85,10 +86,6 @@
             @media (max-width: 899px) {
                 padding: 2% 0 2% 15px;
             }
-
-            // &:nth-last-child(1) {
-                
-            // }
         }
 
         li:hover {

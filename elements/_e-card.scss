@@ -1,0 +1,40 @@
+@import '../settings/s-fonts';
+@import '../settings/s-breakpoints';
+@import '../settings/s-colors';
+
+.e-card {
+    border-radius: 20px;
+    max-width: 40%;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+
+    &__image {
+        height: 70%;
+
+        .e-favorite {
+            position: absolute;
+            top: 6%;
+            right: 6%;
+            color: $secondary-400;
+
+            &:hover {
+                color: $primary-600;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        background-color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 15% 8% 8% 8%;
+        position: relative;
+    }
+}

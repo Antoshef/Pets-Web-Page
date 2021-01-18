@@ -11,6 +11,11 @@
     }
 }
 
-// .o-main {
+.o-main {
+    font-family: 'Nunito', sans-serif;
+    background-color: $secondary-200;
 
-// }
+    button {
+        transition: background-color 0.5s;
+    }
+}
