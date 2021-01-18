@@ -1,0 +1,90 @@
+@import '../settings/s-fonts';
+@import '../settings/s-breakpoints';
+@import '../settings/s-colors';
+
+.e-big-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.2);
+
+    @include for-tablet-only {
+        max-width: 90%;
+        border-radius: 10px;
+    }
+
+    @include for-tablet-landscape-up {
+        max-width: 48%;
+    }
+
+    &__image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 260px;
+        margin-bottom: 30px;
+        position: relative;
+
+        &--cat {
+            background-image: url('https://i.ytimg.com/vi/7Gcy3f9pvQ8/maxresdefault.jpg');
+        }
+
+        &--dog {
+            background-image: url('https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/8/2018/05/promoPat-Sutton-Beagles-for-CL-11_190421941_261563551.jpg');
+        }
+    }
+
+    &__avatar {
+        width: 80px;
+        height: 80px;
+        border: 5px solid white;
+        border-radius: 50%;
+        background-image: url('https://i.ytimg.com/vi/7Gcy3f9pvQ8/maxresdefault.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        bottom: -30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        
+        &--cat {
+            background-image: url('https://i.ytimg.com/vi/7Gcy3f9pvQ8/maxresdefault.jpg');
+        }
+
+        &--dog {
+            background-image: url('https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/8/2018/05/promoPat-Sutton-Beagles-for-CL-11_190421941_261563551.jpg');
+            background-position: center;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        color: $primary-800;
+        margin: 30px 20px;
+
+        h3 {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__footer {
+        text-align: center;
+        border-top: 1px solid $primary-400;
+        text-transform: uppercase;
+        padding: 15px;
+        font-weight: bold;
+        font-size: 14px;
+        transition: background-color 0.5s;
+
+        &:hover {
+            background-color: $primary-400;
+            color: white;
+        }
+    }
+}

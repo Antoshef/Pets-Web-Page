@@ -14,6 +14,8 @@
 .o-main {
     font-family: 'Nunito', sans-serif;
     background-color: $secondary-200;
+    padding: 0 4%;
+    overflow: hidden;
 
     button {
         transition: background-color 0.5s;
