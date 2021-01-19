@@ -6,6 +6,15 @@
     color: $primary-600;
     margin: 20px 0;
 
+    .e-card:nth-child(3) {
+        @media (max-width: 899px) {
+            display: none;
+        }
+        @include for-phone-only {
+            display: block;
+        }
+    }
+
     &__title {
         text-align: center;
         padding: 5%;
@@ -22,6 +31,22 @@
         flex-direction: row;
         flex-wrap: nowrap;
         column-gap: 3%;
+        padding: 30px 0;
+
+        @include for-phone-only {
+            overflow: scroll;
+            overflow-y: hidden;
+            &::-webkit-scrollbar {
+                height: 8px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $primary-600;
+                border-radius: 5px;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+                background-color: $primary-800;
+            }
+        }
 
         div {
             flex-basis: 40%;
