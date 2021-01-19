@@ -32,6 +32,10 @@
         .logo {
             margin-right: 40px;
             align-self: center;
+
+            @include for-small-phone {
+                margin-right: 0;
+            }
         }
     }
 

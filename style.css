@@ -62,6 +62,18 @@ Use a better box model (opinionated).
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 *,
 *::before,
 *::after {
@@ -366,6 +378,12 @@ a {
       align-self: center;
 }
 
+@media (max-width: 400px) {
+  .the-header__menu-left .logo {
+    margin-right: 0;
+  }
+}
+
 .the-header__menu-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -473,7 +491,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("https://love.doghero.com.br/wp-content/uploads/2018/01/Buldogue-franceCC82s-4.jpg") black;
+  background: url("https://www.theladders.com/wp-content/uploads/dog-cat-190709.jpg") black;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -503,6 +521,18 @@ a {
   margin: 20px 0;
 }
 
+@media (max-width: 899px) {
+  .c-cards .e-card:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .c-cards .e-card:nth-child(3) {
+    display: block;
+  }
+}
+
 .c-cards__title {
   text-align: center;
   padding: 5%;
@@ -526,6 +556,24 @@ a {
       flex-wrap: nowrap;
   -webkit-column-gap: 3%;
           column-gap: 3%;
+  padding: 30px 0;
+}
+
+@media (max-width: 599px) {
+  .c-cards-wrapper {
+    overflow: scroll;
+    overflow-y: hidden;
+  }
+  .c-cards-wrapper::-webkit-scrollbar {
+    height: 8px;
+  }
+  .c-cards-wrapper::-webkit-scrollbar-thumb {
+    background-color: #BF7245;
+    border-radius: 5px;
+  }
+  .c-cards-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #523626;
+  }
 }
 
 .c-cards-wrapper div {
@@ -538,9 +586,10 @@ a {
   background-color: white;
   margin-left: -4%;
   text-align: center;
-  padding: 8% 5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  padding: 4% 5%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 899px) {
@@ -584,7 +633,7 @@ a {
 
 .c-adopt__main-item-text {
   color: #301700;
-  padding: 5% 0;
+  padding: 5%;
 }
 
 @media (min-width: 900px) {
@@ -656,6 +705,111 @@ a {
             justify-content: space-between;
     padding: 0 4%;
   }
+}
+
+.c-footer {
+  color: #F0F0F2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+}
+
+@media (min-width: 600px) {
+  .c-footer {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .c-footer {
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.c-footer a {
+  color: #F0F0F2;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.c-footer__title {
+  max-width: 400px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 15px;
+  margin-bottom: 20px;
+  justify-self: center;
+}
+
+@media (min-width: 600px) {
+  .c-footer__title {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+  }
+}
+
+@media (min-width: 900px) {
+  .c-footer__title {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.c-footer__title .btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.c-footer__items {
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.c-footer__items ul > li {
+  border-top: 1px solid #523626;
+  padding: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media (min-width: 600px) {
+  .c-footer__items--top li:nth-last-child(1) {
+    border-bottom: 1px solid #523626;
+  }
+}
+
+.c-footer__items--bot li:nth-last-child(1) {
+  border-bottom: 1px solid #523626;
 }
 
 .logo {
@@ -1014,6 +1168,8 @@ a {
   font-weight: bold;
   cursor: pointer;
   text-transform: uppercase;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .btn-main {
@@ -1041,6 +1197,17 @@ a {
     background-color: #F2A25C;
     color: #F0F0F2;
   }
+}
+
+.btn-white {
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+.btn-white:hover {
+  color: #BF7245;
+  background-color: white;
 }
 
 .e-main-nav {
@@ -1338,6 +1505,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   row-gap: 15%;
+  padding: 10px;
 }
 
 .e-card__search-image img {
@@ -1570,5 +1738,16 @@ a {
 .o-main button {
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
+}
+
+.o-footer {
+  font-family: 'Nunito', sans-serif;
+  background-color: #BF7245;
+  padding: 30px 0;
+}
+
+.o-footer .logo {
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -8,6 +8,7 @@
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
+    transition: background-color 0.5s;
 }
 
 .btn-main {
@@ -34,6 +35,17 @@
             background-color: $primary-400;
             color: $secondary-200;
         }
+    }
+}
+
+.btn-white {
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+
+    &:hover {
+        color: $primary-600;
+        background-color: white;
     }
 }
 
