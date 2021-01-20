@@ -866,11 +866,13 @@ a {
   margin: 0 auto;
 }
 
-.c-footer__end-social i {
+.c-footer__end-social a {
   margin-right: 15px;
+  cursor: pointer;
+  color: #F2A25C;
 }
 
-.c-footer__end-social i:nth-last-child(1) {
+.c-footer__end-social a:nth-last-child(1) {
   margin-right: 0;
 }
 

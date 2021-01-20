@@ -115,8 +115,10 @@
             font-size: 30px;
             margin: 0 auto;
 
-            i {
+            a {
                 margin-right: 15px;
+                cursor: pointer;
+                color: $primary-400;
 
                 &:nth-last-child(1) {
                     margin-right: 0;
